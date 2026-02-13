@@ -1,0 +1,60 @@
+
+
+*{
+  background-color: #000000f4;
+}
+
+#h1{
+  color: blueviolet;
+background-color: #27262600;
+  display: flex;
+  justify-content: center;
+}
+
+#para{
+  color: rgba(255, 255, 255, 0.438);
+  display: flex;
+  justify-content: center;
+  background-color: #27262600;
+}
+
+form{
+
+ /* border: 1px solid white; */
+ height: 60%;
+ width: 80%;
+  background-color: #27262600;
+color: rgba(255, 255, 255, 0.396);
+/* padding: 5px; */
+margin-left: 35px;
+
+}
+label{
+  margin-left: 4px;
+  background-color: #27262600;
+color: rgba(255, 255, 255, 0.818);
+
+}
+
+input{
+  border: 1px solid #27262600;
+  height: 40px;
+  margin-top: 4px;
+  margin-left: 10px;
+  width: 90%;
+  align-items: center;
+color: white;
+
+}
+
+button{
+   border: 1px solid #27262600;
+  height: 40px;
+  margin-top: 4px;
+  margin-left: 10px;
+  width: 90%;
+  align-items: center;color: white;
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: blue;
+}

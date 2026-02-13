@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    /* border:1px solid black; */
+}
+
+body{
+     box-sizing: border-box;
+    height: 90%;
+    width: 90%;
+    border: 1px solid black;
+    background-color: aquamarine;
+}
+#container{
+     height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
