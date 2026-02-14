@@ -21,7 +21,7 @@ justify-content: space-around;
 
 .bg-body-tertiary {
     --bs-bg-opacity: 1;
-    background-color: #27262600;
+    background-color: #27262600 !important;
 }
 
 #leftside-navbar{
@@ -52,13 +52,13 @@ justify-content: space-around;
 
 #content-outline-container{
 margin-top: 20px;
-     height: 500px;
+     height: 450px;
     /* background-color: #666363a8; */
     width: 80% ;
     align-items: center;
    margin-left: 10%;
    border-radius: 10px;
-   border: 1px solid #000000f4;
+   /* border: 1px solid #000000f4; */
 display: flex;
 justify-content: space-around;
 }
@@ -66,7 +66,7 @@ justify-content: space-around;
 #upload_area{
 
     /* margin-top: 20px; */
-     height: 500px;
+     height: 450px;
     background-color: #666363a8;
     width: 40% ;
     align-items: center;
@@ -79,7 +79,8 @@ justify-content: space-around;
 #search_area{
 
     margin-top: px;
-     height: 500px;
+          height: 450px;
+
     background-color: #666363a8;
     width: 60% ;
     align-items: center;
@@ -87,4 +88,27 @@ justify-content: space-around;
    border-radius: 10px;
    border: 1px solid #666363a8;
 
+}
+
+#upload_inner_content{
+    height: 100%;
+    width: 100%;
+    /* border: 3px dashed blue; */
+    border-radius: 20px;
+    background-color: #000000a3;
+    padding: 2px;
+    /* margin-top: 10px; */
+
+}
+
+#btnuploadfile{
+    background-color: #666363a8;
+    width: 60%;
+
+}
+
+#process_btn{
+    cursor: pointer;
+
+   
 }
