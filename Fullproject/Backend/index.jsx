@@ -6,6 +6,7 @@ const dotenv = require("dotenv")
 const bcrypt = require("bcrypt")
 const loginschema = require("./Controller/middleware/Loginschema")
 const cors = require("cors")
+const openai = require("openai")
 app.use(cors())
 dotenv.config()
 app.use(express.json())
@@ -17,6 +18,31 @@ mongoose.connect(process.env.DB)
     console.log("DB is not connected");
     
 })
+
+
+
+
+//OPEN AI API key
+
+const client = new openai.OpenAI({
+
+    apiKey: process.env.OPENAI_API_KEY
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.get("/readData", async(req, res)=>{
     
