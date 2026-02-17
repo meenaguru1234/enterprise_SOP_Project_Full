@@ -19,7 +19,7 @@ function App() {
 
 
   function handleChange(data, value){
-    //  console.log(data, value);
+     console.log(data, value);
       if (!value) {
     alert("Please fill all the fields");
     return;
@@ -88,6 +88,7 @@ navigate("/Home")
    value={loginobj.username}
    onChange={(e) => {
      handleChange("username", e.target.value)}}
+     style={{color:'black'}}
      />
 <br/><br/>
 
@@ -96,9 +97,11 @@ navigate("/Home")
   <input type="text" 
   name="password"
   placeholder='Enter your password'
+  typeof='password'
   value={loginobj.password}
    onChange={(e) => {
      handleChange("password", e.target.value)}}
+     style={{color:'black'}}
      />
 
 <br/><br/>
