@@ -6,7 +6,7 @@ const dotenv = require("dotenv")
 const bcrypt = require("bcrypt")
 const loginschema = require("./Controller/middleware/Loginschema")
 const cors = require("cors")
-const openai = require("openai")
+
 
 app.use("/files", express.static("files"))
 app.use(cors())
@@ -26,11 +26,10 @@ mongoose.connect(process.env.DB)
 
 //OPEN AI API key
 
-const client = new openai.OpenAI({
-
-    apiKey: process.env.OPENAI_API_KEY
-})
-
+const OpenAI = require("openai");
+const client = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 //multer
 
 
@@ -45,9 +44,13 @@ const storage = multer.diskStorage({
     cb(null, uniqueSuffix + file.originalname)
   }
 })
-const upload = multer({ storage: storage })
 
-const Pdfschema = require("./Controller/middleware/Pdfschema")
+
+
+
+const upload = multer({ storage: storage })
+require("./Controller/middleware/Pdfschema")
+const UploadPdf = mongoose.model("PdfDetails")
 
 
 app.post("/upload-files", upload.single("file"), async(req,res)=>{
@@ -59,15 +62,13 @@ console.log(fileName, title);
 
 try {
     
-await Pdfschema.create({title:title, pdf:fileName})
-// res.json({status:"OK", fileName})
-const savedFile = await Pdfschema.create({ title, pdf: fileName });
+await UploadPdf.create({title:title, pdf:fileName})
+res.send({status:"ok", fileName})
+// const savedFile = await UploadPdf.create({ title, pdf: fileName });
 
-res.json({
-  status: "OK",
-  fileName,
-  _id: savedFile._id
-});
+// res.send({
+//   status: "OK",  fileName, _id: savedFile._id
+// });
 
 } catch (error) {
     
@@ -83,8 +84,8 @@ app.get("/get-files",async(req,res)=>{
     try {
         
 
-        const data = await Pdfschema.find({})
-        res.json({status: "Ok", data: data})
+        const data = await UploadPdf.find({})
+        res.json({status: "successfully get files", data: data})
 
 
     } catch (error) {
@@ -97,7 +98,7 @@ app.delete("/delete-file/:id", async (req, res) => {
   try {
     const id = req.params.id;
 
-    const file = await Pdfschema.findById(id);
+    const file = await UploadPdf.findById(id);
 
     if (!file) {
       return res.json({ status: "error", message: "File not found" });
@@ -107,14 +108,15 @@ app.delete("/delete-file/:id", async (req, res) => {
     const fs = require("fs");
     const path = require("path");
 
-    const filePath = path.join(__dirname, "files", file.pdf);
+    // const filePath = path.join(__dirname, "files", file.pdf);
+    app.use("/files", express.static("files"))
 
-    if (fs.existsSync(filePath)) {
-      fs.unlinkSync(filePath);
+    if (fs.existsSync(path)) {
+      fs.unlinkSync(path);
     }
 
     // Delete from database
-    await Pdfschema.findByIdAndDelete(id);
+    await UploadPdf.findByIdAndDelete(id);
 
     res.json({ status: "ok", message: "File deleted successfully" });
 
@@ -178,7 +180,15 @@ app.get("/", async(req,res)=>{
     res.json("Succussfully running...")
 })
 
-app.listen(process.env.Port, ()=>{
-    console.log(`Server running port on: ${process.env.Port}`);
+
+
+// app.listen(process.env.Port, ()=>{
+//     console.log(`Server running port on: ${process.env.Port}`);
     
-})
+// })
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
