@@ -1,0 +1,35 @@
+
+
+#content-container{
+margin-top: 20px;
+     height: 100%;
+    background-color: #666363a8;
+    width: 100% ;
+ font-size: 16px;
+   border-radius: 10px;
+   color: white;
+   margin-top: 10px;
+ 
+}
+#createbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+
+  transition: all 0.15s ease;
+  box-shadow: 0 6px 0 #2e7d32;
+}
+
+#createbtn:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #2e7d32;
+}
+
+/* Hover effect */
+#createbtn:hover {
+  background-color: #45a049;
+}

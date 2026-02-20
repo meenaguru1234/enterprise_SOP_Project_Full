@@ -1,0 +1,82 @@
+
+
+#backid{
+    cursor: pointer;
+}
+
+
+.img-grid{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    gap: 18px;
+}
+
+#img1{
+      background-image: url("../imagesUpload/finance-standard-operating-procedure-template-d84ud.jpg");
+  background-size: contain;      /* fill full screen */
+  background-position: center; /* center image */
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  height: 100%;
+  width: 100%;
+  border: 1px solid #666363a8;
+}
+#img2{
+      background-image: url("../imagesUpload/Finance_sops1.webp");
+  background-size: contain;      /* fill full screen */
+  background-position: center; /* center image */
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  height: 100%;
+  width: 100%;
+  border: 1px solid #666363a8;
+
+}
+#img3{
+      background-image: url("../imagesUpload/HR-SOP-Template-Preview.webp");
+   background-size: contain;   
+  background-position: center; /* center image */
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  height: 100%;
+  width: 100%;
+  border: 1px solid #666363a8;
+
+}
+#img4{
+      background-image: url("../imagesUpload/hr-standard-operating-procedure-template-4k5n7.jpg");
+  background-size: contain;      /* fill full screen */
+  background-position: center; /* center image */
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  height: 100%;
+  width: 100%;
+  border: 1px solid #666363a8;
+
+}
+#img5{
+      background-image: url("../imagesUpload/IC-Simple-SOP-Template-Example.png");
+  background-size: contain;      /* fill full screen */
+  background-position: center; /* center image */
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  height: 100%;
+  width: 100%;
+  border: 1px solid #666363a8;
+
+}
+#img6{
+      background-image: url("../imagesUpload/standard-operating-procedure-steps.webp");
+  background-size: contain;      /* fill full screen */
+  background-position: center; /* center image */
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  height: 100%;
+  width: 100%;
+  border: 1px solid #666363a8;
+  /* border-radius: 20px; */
+
+}

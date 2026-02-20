@@ -154,66 +154,22 @@ const logout = ()=>{
    
   <div id='menu_bar'>
 
-<div id='leftside-navbar1'>
-     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary " >
-      <Container>
-        <Navbar.Brand as={Link} to="/Dashboard" style={{color:'white'}}>Dashboard</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            {/* <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link> */}
-            <NavDropdown title="HR SOPs" id="collapsible-nav-dropdown"
-//              show={hrOpen}
-//   onMouseEnter={() => setHrOpen(true)}
-//   onMouseLeave={() => setHrOpen(false)}
-  >
-              <NavDropdown.Item href="#action/3.1">Employee Onboarding Process</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2"> Leave Application Procedure </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Payroll Processing Steps</NavDropdown.Item>
-              </NavDropdown>
+<div id='leftside-navbar1' >
 
-             <NavDropdown title="IT SOPs" id="collapsible-nav-dropdown"   
-//              show={itOpen}
-//   onMouseEnter={() => setItOpen(true)}
-//   onMouseLeave={() => setItOpen(false)}
-  >
-              <NavDropdown.Item href="#action/3.1">System Access Request</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Password Reset Process</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Software Installation Guide</NavDropdown.Item>
-             </NavDropdown>
+  <div > <a href="/Dashboard" style={{color:'white', textDecoration:'none', cursor: 'pointer'}}>Dashboard</a></div>
+  <div > <a href="/CreateSop" style={{color:'white', textDecoration:'none', cursor: 'pointer'}}>SOPs</a></div>
+  <div > <a href="/template" style={{color:'white' , textDecoration:'none', cursor: 'pointer'}} >Templeate</a></div>
+  <div > <a href="/askai" style={{color:'white' , textDecoration:'none', cursor: 'pointer'}} >Ask AI</a></div>
 
-             <NavDropdown title="Operations SOPs" id="collapsible-nav-dropdown"  
-//               show={opOpen}
-//   onMouseEnter={() => setOpOpen(true)}
-//   onMouseLeave={() => setOpOpen(false)}
-  >
-              <NavDropdown.Item href="#action/3.1">Daily Task Checklist</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Client Communication Process</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Escalation Procedure</NavDropdown.Item>
-             </NavDropdown>
-
-             <NavDropdown title="Finance SOPs" id="collapsible-nav-dropdown"
-//               show={finOpen}
-//   onMouseEnter={() => setFinOpen(true)}
-//   onMouseLeave={() => setFinOpen(false)}
-  >
-              <NavDropdown.Item href="#action/3.1">Invoice Generation</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2"> Expense Reimbursement</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Budget Approval Process</NavDropdown.Item>
-             </NavDropdown>
-
-            
-          </Nav>
-         
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    
 </div>
 
 
      <div id='rightside_navbar1'>
-           <button id='btn_logout1' onClick={logout}><MdLogout /> Logout</button>
+           <button id='btn_logout1' onClick={logout} style={{
+
+
+           }}><MdLogout /> Logout</button>
        
 </div>
     
@@ -227,7 +183,7 @@ const logout = ()=>{
     // border:'1px solid white', 
     margin:'10px',
     padding:'10px',
-    height:'10%'
+    height:'15%'
 
 
 }}>
@@ -237,14 +193,16 @@ const logout = ()=>{
 </div>   <br/>
     
 
-        <div id='upload_area1' style={{height:'100vh', backgroundColor:'#000', width: '90%', margin:'20px' , marginTop:'-20px'}}>
+        <div id='upload_area1' 
+        // style={{height:'100vh', backgroundColor:'#000', width: '90%', margin:'20px' , marginTop:'-20px'}}
+        >
 
             
         <div style={{display:'flex', justifyContent:'left', 
          marginLeft:'15px', color:'white',
           border:'1px solid #27262600',
           paddingLeft:'5px', height:'50px',
-          width:'80%', 
+          width:'80%', marginTop:'-10px',
           fontWeight:'bolder', fontSize:'20px'
           }}>
         
@@ -253,7 +211,7 @@ const logout = ()=>{
          </div>
 
           <div  style={{
-          border:'3px dashed blue', 
+          // border:'3px dashed blue', 
           height: '250px', 
           width:'60%', display:'flex', backgroundColor:"#666363a8",
           justifyContent:'center', marginLeft:'10%', borderRadius:'20px',

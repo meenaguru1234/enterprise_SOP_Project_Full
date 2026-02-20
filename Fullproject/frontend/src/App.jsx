@@ -36,7 +36,7 @@ function App() {
 const handleUpload= async(e)=>{
   e.preventDefault();
 console.log(loginobj);
-if(loginobj.username ==+ "" || loginobj.password===""){
+if(loginobj.username === "" || loginobj.password===""){
   alert("please fill the fields")
 }else{
   authAxios.post("/loginmethod", loginobj).then((res)=>{
@@ -53,7 +53,7 @@ progress: undefined,
 theme: "dark",
 transition: Bounce,
 });
-navigate("/Home")
+navigate("/Dashboard")
   })
   
 }
@@ -94,7 +94,7 @@ navigate("/Home")
 
    <label style={{ marginLeft:'10px', height:'20px', width: '60%'}}> Password</label><br/>
   
-  <input type="text" 
+  <input type="password" 
   name="password"
   placeholder='Enter your password'
   typeof='password'
@@ -106,7 +106,7 @@ navigate("/Home")
 
 <br/><br/>
 
-<button>Sign In</button>
+<button id='button'>Sign In</button>
 
 </form>
 
