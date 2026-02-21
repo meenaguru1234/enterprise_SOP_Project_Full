@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import "../CSS/Dashboard.css"
+// import "../CSS/Dashboard.css"
+import "../CSS/Createsop.css"
 import {  useNavigate } from "react-router-dom";
 import { MdLogout } from "react-icons/md";
 import {jsPDF} from 'jspdf';
@@ -13,7 +14,7 @@ const [title, setTitle] = useState("")
 const [ description, setDescription] = useState("")
 
 // const [results, setResults] = useState([]);
-const [showpdf, setShowpdf] = useState([]);
+// const [showpdf, setShowpdf] = useState([]);
 
 
 
@@ -60,9 +61,9 @@ const logout = ()=>{
   return (
     <div>
         
- <div id='menu_bar'>
+ <div id='sop_menu_bar'>
 
-<div id='leftside-navbar1'>
+<div id='sop_leftside-navbar1'>
     <div > <a href="/Dashboard" style={{color:'white', textDecoration:'none', cursor: 'pointer'}}>Dashboard</a></div>
   <div > <a href="/CreateSop" style={{color:'white', textDecoration:'none', cursor: 'pointer'}}>SOPs</a></div>
   <div > <a href="/template" style={{color:'white' , textDecoration:'none', cursor: 'pointer'}} >Templeate</a></div>
@@ -72,7 +73,7 @@ const logout = ()=>{
 </div>
 
 
-     <div id='rightside_navbar1'>
+     <div id='sop_rightside_navbar1'>
            <button id='btn_logout1' onClick={logout}><MdLogout /> Logout</button>
        
 </div>

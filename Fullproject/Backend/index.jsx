@@ -281,9 +281,31 @@ app.get("/", async(req,res)=>{
 
 const readPDF = require("./files/readPdf");
 const OpenAI = require("openai");
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
 });
+
+app.post("/generate-sop", async (req, res) => {
+
+  const { title, description } = req.body;
+
+  try {
+
+    const response = await openai.responses.create({
+      model: "gpt-4.1-mini",
+      input: `Write a professional SOP.
+
+Title: ${title}
+Description: ${description}`
+    });
+
+    res.json({ result: response.output[0].content[0].text });
+
+  } catch (err) {
+    res.json({ result: "AI limit reached. Try later." });
+  }
+});
+
 
 
 

@@ -1,4 +1,32 @@
+#sop_menu_bar{
+    height: 50px;
+    background-color: #666363a8;
+    width: 100vw;
+    align-items: center;
+   /* margin-left: 10%; */
+   border-radius: 10px;
+   border: 1px solid #27262600;
+margin-top: 50px;
+display: flex;
+justify-content: space-around;
 
+}
+
+#sop_leftside-navbar1{
+   display: flex;
+    justify-content: space-around;
+    width: 60%;
+    height: 100%;
+    /* border: 1px solid white; */
+    color: white;
+    margin-left: -60px;
+    margin-top: 20px;
+}
+
+#sop_rightside_navbar1{
+    color: rgb(150, 195, 239);
+    margin-right: 20px;
+}
 
 #content-container{
 margin-top: 20px;

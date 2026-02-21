@@ -9,6 +9,7 @@ import Dashboard from './Dashboard';
 import CreateSop from './CreateSop';
 import Template from './Template';
 import Ask_ai from './Ask_ai';
+// import pdfComp from '';
 
 // export const datapassing = createContext(null)
 
@@ -33,6 +34,7 @@ const Parentcomponent = () => {
             <Route path='/CreateSop' element={<CreateSop/>}/>
             <Route path='/template' element={<Template/>}/>
             <Route path='/askai' element={<Ask_ai/>}/>
+            {/* <Route path='/pdfcomp' element={<pdfComp/>} /> */}
 
 
         </Routes>

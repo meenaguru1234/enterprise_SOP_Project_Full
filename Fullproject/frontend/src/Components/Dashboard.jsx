@@ -1,11 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import "../CSS/Dashboard.css"
-// import "../CSS/home.css"
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-// import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Nav from 'react-bootstrap/Nav';
 import { MdLogout } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 import { LuUpload } from "react-icons/lu";
@@ -15,6 +9,15 @@ import { IoMdRemoveCircleOutline } from "react-icons/io";
 import { Bounce, toast } from 'react-toastify';
 import { Link } from "react-router-dom";
 import Spinner from 'react-bootstrap/Spinner';
+// import {pdfjs} from 'react-pdf'
+
+// import pdfComp from './pdfComp';
+
+
+// pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+//   'pdfjs-dist/build/pdf.worker.min.mjs',
+//   import.meta.url,
+// ).toString();
 
 const Dashboard = () => {
 
@@ -310,8 +313,10 @@ const logout = ()=>{
 
 
 </div> 
-
-</div>
+{/* <div>
+<pdfComp />
+  </div> */}
+  </div>
  )
 
 }
